@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SobiSite</title>
+		<style>
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+			padding: 20px;
+		}
+
+		.gallery-item {
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+		}
+
+		.gallery-item img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.gallery-item p {
+			padding: 10px;
+			margin: 0;
+			background: white;
+		}
+
+
+		nav {
+			background-color: #f8f9fa;
+			padding: 15px;
+			position: sticky;
+			top: 0;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		}
+	    nav {
+            margin: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+		
+		.profile-section {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 2rem;
+			padding: 2rem;
+			align-items: start;
+		}
+		
+		.profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+		
+		body {
+ 	        background-image: url('background.png');
+       	    background-size: cover;
+ 	        background-position: center;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+		
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+		
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+		
+        h2 {
+            color: #333;
+        }
+		
+        p {
+            line-height: 1.6;
+        }
+		
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+    </style>
+	</head>
+
+<body>
+
+
+	<header>به سایت من خوش آمدید</header>
+	
+	<nav>
+    <a href="index.html">صفحه اصلی</a>
+    <a href="about.html">درباره من</a>
+	<a href="resume">رزومه</a>
+    <a href="portfolio.html">نمونه‌کارها</a>
+    <a href="contact.html">تماس</a>
+	</nav>
+
+
+
+	<div class="profile-section">
+
+		<img src="profile.png" alt="Profile Picture" class="profile-image">
+
+		<section id="about">
+		<h2>سبحان آب حیات</h2>
+			<h3>مهندس برق | هنرمند | طراح</h3>
+		<p>درود! در اینجا می‌توانید درباره من، تجربیات و پروژه‌های من بیشتر بدانید</p>
+		</section>
+
+
+
+		<section id="resume">
+		<h2>رزومه</h2>
+		<h3>تحصیلات</h3>
+		<p>مهندسی برق</p>
+		<h3>تجربیات کاری</h3>
+		<p>تهیه پوستر، تدوین، ساخت کلیپ، تولید و کنترل کیفیت تابلوبرق، لحیم‌‌‌کاری، مونتاژ سنسور نوری، کتاب فروشی، معلم ریاضی و علوم</p>
+		</section>
+
+		<section id="portfolio">
+		<h2>نمونه‌کارها</h2>
+		<p>در این قسمت، برخی از آثار هنری، پروژه‌ها و طراحی‌هایی که انجام داده‌ام را می‌توانید مشاهده کنید</p>
+		<!-- You can add links to images or projects here -->
+		
+			<div class="gallery">
+				<div class="gallery-item">
+					<img src="art1.jpg" alt="طراحی چهره">
+					<p>طراحی چهره با مداد</p>
+				</div>
+				<div class="gallery-item">
+					<img src="art2.jpg" alt="طراحی دیجیتال">
+					<p>طراحی با قلم نوری</p>
+				</div>
+				<div class="gallery-item">
+					<img src="art3.jpg" alt="پروژه برق">
+					<p>پروژه مهندسی برق</p>
+				</div>
+			</div>
+		
+		</section>
+
+
+
+		<section id="contact">
+		<h2>تماس با من</h2>
+		<p>اگر می‌خواهید با من تماس بگیرید، می‌توانید از طریق ایمیل یا شبکه‌های اجتماعی زیر با من ارتباط برقرار کنید</p>
+		<p>Sobhan.abhayat@gmail.com</p>
+		<p>[لینک شبکه‌های اجتماعی]</p>
+		</section>
+
+
+
+
+
+	<footer>
+	<p>سبحان آب حیات</p>
+	</footer>
+
+
+
+
+
+</body>
+
+
+</html>
+
+</html>
