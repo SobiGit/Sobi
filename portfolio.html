@@ -3,14 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عنوان صفحه</title>
-    <!-- کپی کردن کل بخش style از index.html -->
+    <title>My portfolio</title>
     <style>
-        /* کل استایل‌های موجود در index.html رو اینجا کپی کنید */
+        /* استایل‌های پایه مثل قبل */
+        [همان استایل‌های قبلی]
+
+        /* استایل‌های جدید برای گالری */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-item h3 {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        .gallery-item p {
+            padding: 0 10px 10px;
+            margin: 0;
+            color: #666;
+        }
+
+        /* استایل برای دسته‌بندی‌ها */
+        .portfolio-categories {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .category-button {
+            padding: 8px 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 20px;
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .category-button:hover {
+            background: #007BFF;
+        }
     </style>
 </head>
 <body>
-    <header>به سایت من خوش آمدید</header>
+    <header>نمونه کارها</header>
     <nav>
         <a href="index.html">صفحه اصلی</a>
         <a href="about.html">درباره من</a>
@@ -19,8 +78,38 @@
         <a href="contact.html">تماس</a>
     </nav>
 
-    <!-- محتوای اصلی هر صفحه -->
-    
+    <section>
+        <h2>نمونه کارها</h2>
+        <div class="portfolio-categories">
+            <button class="category-button">همه</button>
+            <button class="category-button">طراحی</button>
+            <button class="category-button">مهندسی</button>
+            <button class="category-button">هنری</button>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="art1.jpg" alt="طراحی چهره">
+                <h3>طراحی چهره</h3>
+                <p>طراحی با مداد، سال 1402</p>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="art2.jpg" alt="طراحی دیجیتال">
+                <h3>طراحی دیجیتال</h3>
+                <p>طراحی با قلم نوری</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="project1.jpg" alt="پروژه برق">
+                <h3>پروژه مهندسی</h3>
+                <p>طراحی و ساخت مدار الکترونیکی</p>
+            </div>
+
+            <!-- می‌تونید موارد بیشتری اضافه کنید -->
+        </div>
+    </section>
+
     <footer>
         <p>سبحان آب حیات</p>
     </footer>
