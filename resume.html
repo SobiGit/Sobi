@@ -3,14 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عنوان صفحه</title>
-    <!-- کپی کردن کل بخش style از index.html -->
+    <title>My resume</title>
     <style>
-        /* کل استایل‌های موجود در index.html رو اینجا کپی کنید */
+	
+        body {
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        nav {
+            margin: 20px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+		
+		
+		
+        /* استایل‌های جدید برای رزومه */
+		
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .resume-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            background: #f0f0f0;
+            height: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: #007BFF;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .timeline-item {
+            border-right: 2px solid #007BFF;
+            padding: 0 20px 20px 0;
+            margin: 0 10px 10px 0;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #007BFF;
+            border-radius: 50%;
+            position: absolute;
+            right: -6px;
+            top: 5px;
+        }
+
+        .time-period {
+            color: #666;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
-    <header>به سایت من خوش آمدید</header>
+    <header>رزومه من</header>
     <nav>
         <a href="index.html">صفحه اصلی</a>
         <a href="about.html">درباره من</a>
@@ -19,8 +125,80 @@
         <a href="contact.html">تماس</a>
     </nav>
 
-    <!-- محتوای اصلی هر صفحه -->
-    
+    <div class="resume-grid">
+        <!-- ستون سمت راست -->
+        <div>
+            <section class="resume-section">
+                <h2>اطلاعات تماس</h2>
+                <p>📧 ایمیل: Sobhan.abhayat@gmail.com</p>
+                <p>📱 تلفن: [شماره تماس]</p>
+                <p>📍 ایران، اصفهان</p>
+            </section>
+
+            <section class="resume-section">
+                <h2>مهارت‌ها</h2>
+                <p>طراحی با مداد</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+                
+                <p>طراحی دیجیتال</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+
+                <p>مهندسی برق</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%"></div>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h2>زبان‌ها</h2>
+                <p>فارسی (زبان مادری)</p>
+                <p>انگلیسی (پیشرفته)</p>
+            </section>
+        </div>
+
+        <!-- ستون سمت چپ -->
+        <div>
+            <section class="resume-section">
+                <h2>تحصیلات</h2>
+                <div class="timeline-item">
+                    <h3>مهندسی برق</h3>
+                    <p class="time-period">1397-1402</p>
+                    <p>دانشگاه صنعتی اصفهان</p>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h2>تجربیات کاری</h2>
+                <div class="timeline-item">
+                    <h3>طراحی و تولید تابلو برق</h3>
+                    <p class="time-period">تابستان 1400</p>
+                    <p>- کنترل کیفیت تابلوبرق</p>
+                    <p>- لحیم‌کاری و مونتاژ قطعات</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>تدریس در دبیرستان های دولتی یزد</h3>
+                    <p class="time-period">1402-1404</p>
+                    <p>- تدریس ریاضی و علوم</p>
+                    <p>- برنامه‌ریزی آموزشی</p>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h2>دوره‌ها و گواهینامه‌ها</h2>
+                <div class="timeline-item">
+                    <h3>[نام دوره]</h3>
+                    <p class="time-period">[تاریخ]</p>
+                    <p>[توضیحات]</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <footer>
         <p>سبحان آب حیات</p>
     </footer>
