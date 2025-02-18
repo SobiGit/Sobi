@@ -1,0 +1,22 @@
+/* 1. CSS Variables */
+:root {
+    /* رنگ‌های اصلی */
+    --primary-color: #007BFF;
+    --secondary-color: #333;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    
+    /* سایه‌ها */
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    /* فاصله‌گذاری */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    
+    /* اندازه‌های فونت */
+    --font-size-sm: 0.9em;
+    --font-size-md: 1em;
+    --font-size-lg: 1.2em;
+    --font-size-xl: 1.5em;
+}
