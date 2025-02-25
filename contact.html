@@ -7,7 +7,8 @@
     <meta name="author" content="سبحان آب حیات">
     <title>ContactMe</title>
     <link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>تماس با من</header>
@@ -25,7 +26,7 @@
         <p>از طریق فرم زیر می‌توانید با من در ارتباط باشید. من به زودی به پیام شما پاسخ خواهم داد.</p>
         
         <div class="contact-info">
-			<a href="mailto:sobhan.abhayat@gmail.com?subject=sobi.pages&body=سلام، من از سایت شما بازدید کردم و می‌خواهم با شما تماس بگیرم.">ارسال ایمیل به من</a>
+            <a href="mailto:sobhan.abhayat@gmail.com?subject=sobi.pages&body=سلام، من از سایت شما بازدید کردم و می‌خواهم با شما تماس بگیرم." class="btn">ارسال ایمیل به من</a>
         </div>
         
         <div class="contact-form">
@@ -58,9 +59,8 @@
     <section id="social-media">
         <h2>شبکه‌های اجتماعی</h2>
         <div class="social-links">
-            <!-- به جای # لینک واقعی شبکه‌های اجتماعی خود را قرار دهید -->
             <a href="https://www.instagram.com/Sobhan.abhayat" target="_blank" class="social-link">
-				<i class="fab fa-instagram social-icon"></i>
+                <i class="fab fa-instagram social-icon"></i>
                 Instagram
             </a>
             
@@ -79,7 +79,6 @@
     <section id="location">
         <h2>موقعیت من</h2>
         <div class="map-container">
-            <!-- در اینجا می‌توانید نقشه Google Maps یا یک تصویر جایگزین قرار دهید -->
             <img src="/api/placeholder/600/300" alt="نقشه" class="map-image">
             <p>ایران</p>
         </div>
@@ -90,14 +89,9 @@
     </footer>
 
     <script>
-        // اسکریپت ساده برای اعتبارسنجی فرم
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            
-            // می‌توانید در اینجا کد ارسال اطلاعات فرم به سرور را اضافه کنید
             alert('متاسفانه هنوز این قسمت از سایت تنظیم نشده است. میتوانید مستقیما ایمیل بزنید یا از طریق تلگرام، تماس بگیرید');
-            
-            // پاک کردن فرم
             this.reset();
         });
     </script>

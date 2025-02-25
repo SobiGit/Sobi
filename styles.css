@@ -1,20 +1,14 @@
 /* 1. CSS Variables */
 :root {
-    /* رنگ‌های اصلی */
-    --primary-color: #007BFF;
-    --secondary-color: #333;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    
-    /* سایه‌ها */
+    --primary-color: #1E90FF; /* آبی آسمانی */
+    --secondary-color: #2F4F4F; /* خاکستری تیره */
+    --background-color: #F5F5F5; /* خاکستری روشن */
+    --text-color: #333; /* متن اصلی */
+    --accent-color: #FF6B6B; /* رنگ تأکیدی */
     --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
-    /* فاصله‌گذاری */
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 30px;
-    
-    /* اندازه‌های فونت */
     --font-size-sm: 0.9em;
     --font-size-md: 1em;
     --font-size-lg: 1.2em;
@@ -33,7 +27,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Vazir', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     text-align: center;
@@ -56,8 +50,6 @@ nav {
     margin: var(--spacing-md);
     background-color: #f8f9fa;
     padding: var(--spacing-sm);
-    position: sticky;
-    top: 0;
     box-shadow: var(--box-shadow);
     z-index: 100;
 }
@@ -106,6 +98,7 @@ p {
     align-items: center;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .profile-image {
@@ -122,119 +115,7 @@ p {
     transform: scale(1.05);
 }
 
-/* 6. استایل‌های گالری */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
-}
-
-.gallery-item {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.gallery-item p {
-    padding: var(--spacing-sm);
-    margin: 0;
-    background: white;
-}
-
-/* 7. استایل‌های رزومه */
-.resume-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-md);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-md);
-}
-
-.resume-section {
-    background: white;
-    padding: var(--spacing-md);
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
-    margin-bottom: var(--spacing-md);
-    text-align: right;
-}
-
-.skill-bar {
-    width: 100%;
-    background: #f0f0f0;
-    height: 20px;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-.skill-level {
-    height: 100%;
-    background: var(--primary-color);
-    border-radius: 10px;
-    position: relative;
-}
-
-.timeline-item {
-    padding: 0 0 var(--spacing-md) 0;
-    margin: 0 10px 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.timeline-item:last-child {
-    border-bottom: none;
-}
-
-.time-period {
-    color: #666;
-    font-size: var(--font-size-sm);
-}
-
-/* 8. استایل‌های فورم تماس */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: right;
-}
-
-.form-group {
-    margin-bottom: var(--spacing-md);
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: var(--spacing-sm);
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
+/* 6. استایل‌های دکمه‌ها */
 .btn {
     background-color: var(--primary-color);
     color: white;
@@ -242,11 +123,48 @@ p {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: var(--spacing-sm);
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* 7. انیمیشن‌ها */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 8. Media Queries برای ریسپانسیو */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* 9. استایل‌های فوتر */
@@ -255,105 +173,4 @@ footer {
     padding: var(--spacing-sm);
     background-color: var(--secondary-color);
     color: white;
-}
-
-/* 10. Media Queries برای ریسپانسیو */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .resume-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .profile-section {
-        padding: var(--spacing-sm);
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-    
-    nav {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-    }
-    
-    .profile-image {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-/* 11. انیمیشن‌ها */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-
-/* استایل‌های اضافی برای صفحه تماس */
-.contact-info {
-    background-color: #f8f9fa;
-    padding: var(--spacing-md);
-    border-radius: 8px;
-    margin-bottom: var(--spacing-md);
-    text-align: right;
-    border-right: 4px solid var(--primary-color);
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    margin: var(--spacing-md) 0;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.3s ease;
-}
-
-.social-link:hover {
-    transform: translateY(-5px);
-    color: var(--primary-color);
-}
-
-.social-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 24px;
-    margin-bottom: var(--spacing-sm);
-	
-	
-	
-}
-
-.map-container {
-    margin-top: var(--spacing-md);
-}
-
-.map-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
 }
