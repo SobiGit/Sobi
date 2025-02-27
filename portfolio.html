@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
-	    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdn.fontcdn.ir/iran-sans/iran-sans.css">
 </head>
 
 <body>
     <header>نمونه کارها</header>
-    <nav>
+<nav>
+    <button class="menu-toggle">☰</button>
+    <div class="nav-links">
         <a href="index.html">صفحه اصلی</a>
         <a href="about.html">درباره من</a>
         <a href="resume.html">رزومه</a>
-	    <a href="portfolio.html">نمونه‌کارها</a>
+        <a href="portfolio.html">نمونه‌کارها</a>
         <a href="contact.html">تماس</a>
-    </nav>
+    </div>
+</nav>
 
     <section>
         <h2>نمونه کارها</h2>
@@ -52,5 +56,13 @@
     <footer>
         <p>سبحان آب حیات</p>
     </footer>
+	
+	<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+	</script>
+	
+	
 </body>
 </html>

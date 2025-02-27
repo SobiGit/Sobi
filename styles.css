@@ -1,13 +1,14 @@
 /* 1. CSS Variables */
 :root {
     /* رنگ‌های اصلی */
-    --primary-color: #007BFF;
-    --secondary-color: #333;
-    --background-color: #f4f4f4;
-    --text-color: #333;
     
-    /* سایه‌ها */
+	
+    --primary-color: #007BFF; /* آبی برای دکمه‌ها و لینک‌ها */
+    --secondary-color: #333333; /* خاکستری تیره برای تیترها و هدر */
+    --background-color: #f4f4f4; /* پس‌زمینه روشن */
+    --text-color: #555555; /* رنگ متن معمولی */
     --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
     
     /* فاصله‌گذاری */
     --spacing-sm: 10px;
@@ -34,6 +35,7 @@ html {
 
 body {
     font-family: 'Vazir', Arial, sans-serif;
+	font-size: var(--font-size-md); /* 1em */
     background-color: var(--background-color);
     color: var(--text-color);
     text-align: center;
@@ -49,10 +51,12 @@ body {
 
 /* 3. استایل‌های هدر و منو */
 header {
+	font-family: 'IranSans', 'Vazir', sans-serif; /* فونت مکمل برای هدر */
     background-color: var(--secondary-color);
     color: white;
     padding: var(--spacing-md);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl); /* 1.5em */
+    font-weight: bold;
 }
 
 nav {
@@ -80,8 +84,8 @@ nav a:hover {
 /* 4. استایل‌های بخش‌ها */
 section {
     max-width: 800px;
-    margin: var(--spacing-md) auto;
-    padding: var(--spacing-md);
+    margin: var(--spacing-lg) auto; /* 30px بالا و پایین */
+    padding: var(--spacing-md); /* 20px داخل بخش */
     background-color: white;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
@@ -90,16 +94,24 @@ section {
 h2 {
     color: var(--secondary-color);
     margin-bottom: var(--spacing-md);
+	font-family: 'IranSans', 'Vazir', sans-serif;
+    font-size: var(--font-size-lg); /* 1.2em */
+    font-weight: 700;
 }
 
 h3 {
     color: var(--secondary-color);
     margin-bottom: var(--spacing-sm);
+	font-family: 'Vazir', sans-serif;
+    font-size: var(--font-size-md); /* 1em */
+    font-weight: 600;
 }
 
 p {
     line-height: 1.6;
     margin-bottom: var(--spacing-sm);
+	font-family: 'Vazir', sans-serif;
+    font-size: var(--font-size-sm); /* 0.9em */
 }
 
 /* 5. استایل‌های پروفایل */
@@ -129,12 +141,13 @@ p {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    padding: var(--spacing-md);
+    gap: var(--spacing-lg); /* 30px فاصله بین آیتم‌ها */
+    padding: var(--spacing-md); /* 20px اطراف گالری */
 }
 
 .gallery-item {
     border-radius: 8px;
+	padding: var(--spacing-sm); /* 10px داخل هر آیتم */
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: transform 0.3s ease;
@@ -146,14 +159,15 @@ p {
 
 .gallery-item img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* ارتفاع ثابت */
+    object-fit: cover; /* عکس‌ها بدون کشیدگی تنظیم می‌شن */
 }
 
+
 .gallery-item p {
-    padding: var(--spacing-sm);
-    margin: 0;
-    background: white;
+    font-size: var(--font-size-sm); /* 0.9em */
+    color: var(--text-color);
+    margin-top: var(--spacing-sm);
 }
 
 /* 7. استایل‌های رزومه */
@@ -240,7 +254,7 @@ p {
 
 .btn {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--primary-color);
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -276,6 +290,24 @@ footer {
 }
 
 @media (max-width: 480px) {
+	
+	 .menu-toggle {
+        display: block; /* توی موبایل نشون داده می‌شه */
+    }
+	 .nav-links {
+        display: none; /* منو مخفیه تا کلیک بشه */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #f8f9fa;
+        width: 100%;
+        padding: var(--spacing-md);
+    }
+	 .nav-links.active {
+        display: flex; /* با کلیک باز می‌شه */
+    }
+	
     .gallery {
         grid-template-columns: 1fr;
     }
@@ -360,3 +392,26 @@ footer {
     border-radius: 8px;
     box-shadow: var(--box-shadow);
 }
+
+
+.menu-toggle {
+    display: none; /* توی دسکتاپ مخفیه */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+
+
+
+
+
+

@@ -8,17 +8,21 @@
     <title>ContactMe</title>
     <link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.fontcdn.ir/iran-sans/iran-sans.css">
 </head>
 <body>
     <header>تماس با من</header>
     
-    <nav>
+<nav>
+    <button class="menu-toggle">☰</button>
+    <div class="nav-links">
         <a href="index.html">صفحه اصلی</a>
         <a href="about.html">درباره من</a>
         <a href="resume.html">رزومه</a>
         <a href="portfolio.html">نمونه‌کارها</a>
         <a href="contact.html">تماس</a>
-    </nav>
+    </div>
+</nav>
     
     <section id="contact" class="fade-in">
         <h2>ارتباط با من</h2>
@@ -101,5 +105,13 @@
             this.reset();
         });
     </script>
+	
+	<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+	</script>
+	
+	
 </body>
 </html>

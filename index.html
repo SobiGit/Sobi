@@ -9,6 +9,7 @@
 		<meta name="author" content="سبحان آب حیات">		
 		<title>SobiSite</title>
 		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://cdn.fontcdn.ir/iran-sans/iran-sans.css">
 </head>
 
 <body>
@@ -16,13 +17,16 @@
 
 	<header>به سایت من خوش آمدید</header>
 	
-	<nav>
-    <a href="index.html">صفحه اصلی</a>
-    <a href="about.html">درباره من</a>
-	<a href="resume">رزومه</a>
-    <a href="portfolio.html">نمونه‌کارها</a>
-    <a href="contact.html">تماس</a>
-	</nav>
+<nav>
+    <button class="menu-toggle">☰</button>
+    <div class="nav-links">
+        <a href="index.html">صفحه اصلی</a>
+        <a href="about.html">درباره من</a>
+        <a href="resume.html">رزومه</a>
+        <a href="portfolio.html">نمونه‌کارها</a>
+        <a href="contact.html">تماس</a>
+    </div>
+</nav>
 
 
 	<main>
@@ -77,7 +81,11 @@
 	</footer>
 
 
-
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+</script>
 
 
 </body>
