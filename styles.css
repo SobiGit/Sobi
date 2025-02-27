@@ -49,7 +49,7 @@
     --spacing-lg: 30px;
     
     /* اندازه‌های فونت */
-    --font-size-sm: 0.9em;
+    --font-size-sm: 1em;
     --font-size-md: 1em;
     --font-size-lg: 1.2em;
     --font-size-xl: 1.5em;
@@ -67,7 +67,7 @@ html {
 }
 
 body {
-    font-family: 'Vazir', Arial, sans-serif;
+    font-family: 'IRANSans', Arial, sans-serif;
 	font-weight: normal;
 	font-size: var(--font-size-md); /* 1em */
     background-color: var(--background-color);
@@ -80,12 +80,11 @@ body {
     background-attachment: fixed;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
 
 
 /* 3. استایل‌های هدر و منو */
 header {
-	font-family: 'IRANSans', 'Vazir', sans-serif; /* فونت مکمل برای هدر */
+	font-family: 'IRANSans', sans-serif; /* فونت مکمل برای هدر */
     background-color: var(--secondary-color);
     color: white;
     padding: var(--spacing-md);
@@ -120,7 +119,7 @@ section {
     max-width: 800px;
     margin: var(--spacing-lg) auto; /* 30px بالا و پایین */
     padding: var(--spacing-md); /* 20px داخل بخش */
-    background-color: white;
+    background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
 }
@@ -128,7 +127,7 @@ section {
 h2 {
     color: var(--secondary-color);
     margin-bottom: var(--spacing-md);
-	font-family: 'IRANSans', 'Vazir', sans-serif;
+	font-family: 'IRANSans', sans-serif;
     font-size: var(--font-size-lg); /* 1.2em */
     font-weight: 500;
 }
@@ -136,7 +135,7 @@ h2 {
 h3 {
     color: var(--secondary-color);
     margin-bottom: var(--spacing-sm);
-	font-family: 'Vazir', sans-serif;
+	font-family: 'IRANSans', sans-serif;
     font-size: var(--font-size-md); /* 1em */
     font-weight: 400;
 }
@@ -144,9 +143,9 @@ h3 {
 p {
     line-height: 1.6;
     margin-bottom: var(--spacing-sm);
-	font-family: 'Vazir', sans-serif;
-	 font-weight: 300; 
-    font-size: var(--font-size-sm); /* 0.9em */
+	font-family: 'IRANSans', sans-serif;
+	font-weight: 300; 
+    font-size: var(--font-size-md); /* 1em */
 }
 
 /* 5. استایل‌های پروفایل */
@@ -410,7 +409,7 @@ footer {
 .social-icon {
     width: 48px;
     height: 48px;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: var(--spacing-sm);
 	
 	
