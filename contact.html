@@ -93,24 +93,25 @@
         <p>تمامی حقوق محفوظ است &copy; سبحان آب حیات</p>
     </footer>
 
-    <script>
-        // اسکریپت ساده برای اعتبارسنجی فرم
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // می‌توانید در اینجا کد ارسال اطلاعات فرم به سرور را اضافه کنید
-            alert('متاسفانه هنوز این قسمت از سایت تنظیم نشده است. میتوانید مستقیما ایمیل بزنید یا از طریق تلگرام، تماس بگیرید');
-            
-            // پاک کردن فرم
-            this.reset();
-        });
-    </script>
+ 
+
 	
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
-    });
+		// اسکریپت منو
+		document.querySelector('.menu-toggle').addEventListener('click', function() {
+			document.querySelector('.nav-links').classList.toggle('active');
+		});
+
+		// اسکریپت فرم تماس (فقط توی contact.html)
+		document.getElementById('contactForm').addEventListener('submit', function(event) {
+			event.preventDefault();
+			   // می‌توانید در اینجا کد ارسال اطلاعات فرم به سرور را اضافه کنید
+			alert('متاسفانه هنوز این قسمت از سایت تنظیم نشده است. می‌توانید مستقیما ایمیل بزنید یا از طریق تلگرام تماس بگیرید');
+			this.reset();
+		});
 	</script>
+	
 	
 	
 </body>

@@ -254,7 +254,7 @@ p {
 
 .btn {
     background-color: var(--primary-color);
-    color: var(--primary-color);
+    color: white; /* رنگ متن سفید */
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -291,10 +291,11 @@ footer {
 
 @media (max-width: 480px) {
 	
-	 .menu-toggle {
+    .menu-toggle {
         display: block; /* توی موبایل نشون داده می‌شه */
     }
-	 .nav-links {
+
+    .nav-links {
         display: none; /* منو مخفیه تا کلیک بشه */
         flex-direction: column;
         position: absolute;
@@ -304,7 +305,7 @@ footer {
         width: 100%;
         padding: var(--spacing-md);
     }
-	 .nav-links.active {
+    .nav-links.active {
         display: flex; /* با کلیک باز می‌شه */
     }
 	
@@ -408,8 +409,6 @@ footer {
     justify-content: center;
     gap: var(--spacing-md);
 }
-
-
 
 
 
