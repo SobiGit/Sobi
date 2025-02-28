@@ -286,6 +286,29 @@ p {
     outline: none;
 }
 
+
+.menu-toggle {
+	
+    display: none; /* در دسکتاپ دکمه منو مخفی است */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+
+
+
+
+
+
 .btn {
     background-color: var(--primary-color);
     color: white; /* رنگ متن سفید */
@@ -331,32 +354,36 @@ footer {
 @media (max-width: 768px) {
 	
     .menu-toggle {
-        display: block; /* توی موبایل نشون داده می‌شه */
+        display: block; /* در موبایل دکمه منو نمایش داده می‌شود */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin-bottom: 10px;
     }
 
     .nav-links {
         display: none; /* منو مخفیه تا کلیک بشه */
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #f8f9fa;
         width: 100%;
         padding: var(--spacing-md);
     }
+	
     .nav-links.active {
         display: flex; /* با کلیک باز می‌شه */
     }
 	
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-    
+   
     nav {
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-sm);
+        align-items: flex-start;
     }
+	
+	.gallery {
+        grid-template-columns: 1fr;
+    }
+    
     
     .profile-image {
         width: 150px;
@@ -432,24 +459,5 @@ footer {
     border-radius: 8px;
     box-shadow: var(--box-shadow);
 }
-
-
-.menu-toggle {
-    
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-md);
-}
-
-
-
 
 

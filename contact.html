@@ -98,10 +98,21 @@
  
 
 	<script>
-		// اسکریپت منو
-		document.querySelector('.menu-toggle').addEventListener('click', function() {
-			document.querySelector('.nav-links').classList.toggle('active');
-		});
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		var menuToggle = document.querySelector('.menu-toggle');
+		var navLinks = document.querySelector('.nav-links');
+		
+		if (menuToggle && navLinks) {
+			menuToggle.addEventListener('click', function() {
+				navLinks.classList.toggle('active');
+				console.log('منو کلیک شد!'); // برای دیباگ
+			});
+		} else {
+			console.error('المان‌های منو پیدا نشدند!'); // برای دیباگ
+		}
+	});
+	
 
 		// اسکریپت فرم تماس (فقط توی contact.html)
 		document.getElementById('contactForm').addEventListener('submit', function(event) {
