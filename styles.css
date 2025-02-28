@@ -53,6 +53,16 @@
     --font-size-md: 1em;
     --font-size-lg: 1.2em;
     --font-size-xl: 1.5em;
+	
+
+    /* متغیرهای تم تاریک */
+    --dark-background: #222;
+    --dark-text: #f4f4f4;
+    --dark-secondary: #444;
+    --dark-box-shadow: 0 2px 5px rgba(255,255,255,0.1);	
+	
+	
+	
 }
 
 /* 2. Reset و استایل‌های پایه */
@@ -147,6 +157,19 @@ p {
 	font-weight: 300; 
     font-size: var(--font-size-md); /* 1em */
 }
+
+
+
+.fade-in-element {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 
 /* 5. استایل‌های پروفایل */
 .profile-section {
@@ -458,6 +481,74 @@ footer {
     height: auto;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
+}
+
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #0056b3;
+}
+
+
+
+.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+.dark-mode header, .dark-mode footer {
+    background-color: var(--dark-secondary);
+}
+
+.dark-mode section, .dark-mode .resume-section {
+    background-color: #333;
+    box-shadow: var(--dark-box-shadow);
+}
+
+.dark-mode h2, .dark-mode h3 {
+    color: var(--primary-color);
+}
+
+.dark-mode nav {
+    background-color: #333;
+}
+
+.dark-mode nav a {
+    color: var(--dark-text);
+}
+
+.theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.theme-button:hover {
+    transform: rotate(30deg);
+}
+
+.dark-mode .theme-button {
+    color: var(--dark-text);
 }
 
 

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="سبحان آب حیات، مهندس برق، طراحی دیجیتال، هنرمند ایرانی، رزومه، نمونه کار">
 	<!-- اضافه کردن توضیحات متا -->
     <meta name="description" content="رزومه سبحان آب حیات - مهندس برق و طراح دیجیتال">
     <meta name="author" content="سبحان آب حیات">
     <title>My resume</title>
-    <!-- جداسازی CSS -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -155,6 +156,30 @@
 		} else {
 			console.error('المان‌های منو پیدا نشدند!'); // برای دیباگ
 		}
+	});
+	</script>
+	
+	
+	
+	<button id="back-to-top" title="بازگشت به بالا">↑</button>
+
+	<script>
+	// دکمه بازگشت به بالا
+	var backToTopButton = document.getElementById("back-to-top");
+
+	// وقتی کاربر 20 پیکسل از بالای صفحه اسکرول کرد، دکمه را نشان بده
+	window.onscroll = function() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			backToTopButton.style.display = "block";
+		} else {
+			backToTopButton.style.display = "none";
+		}
+	};
+
+	// وقتی روی دکمه کلیک شد، به بالای صفحه اسکرول کن
+	backToTopButton.addEventListener("click", function() {
+		document.body.scrollTop = 0; // برای Safari
+		document.documentElement.scrollTop = 0; // برای Chrome, Firefox, IE و Opera
 	});
 	</script>
 	
