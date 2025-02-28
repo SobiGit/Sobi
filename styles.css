@@ -310,6 +310,11 @@ footer {
 
 /* 10. Media Queries برای ریسپانسیو */
 @media (max-width: 768px) {
+	
+	.menu-toggle {
+        display: none; /* فقط توی دسکتاپ مخفیه */
+	}	
+	
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -430,7 +435,7 @@ footer {
 
 
 .menu-toggle {
-    display: none; /* توی دسکتاپ مخفیه */
+    
     background: none;
     border: none;
     font-size: 24px;
