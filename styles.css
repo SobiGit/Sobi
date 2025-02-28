@@ -351,7 +351,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 	
     .menu-toggle {
         display: block; /* در موبایل دکمه منو نمایش داده می‌شود */
