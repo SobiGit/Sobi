@@ -159,8 +159,8 @@ p {
 }
 
 
-h2, h3 {
-    border-bottom: 2px solid #007BFF; /* خط آبی زیر عنوان */
+h2 {
+    border-bottom: 2px solid #007BFF; /* خط آبی فقط زیر h2 */
     padding-bottom: 10px; /* فاصله بین عنوان و خط */
     margin-bottom: 20px; /* فاصله بین خط و متن زیر آن */
 }
