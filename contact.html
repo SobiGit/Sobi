@@ -63,9 +63,9 @@
                     <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
                 
-                <button type="submit" class="btn">ارسال پیام</button>
-            </form>
-        </div>
+				<input type="hidden" name="_replyto" value="sobhan.abhayat@gmail.com">
+				<button type="submit" class="btn">ارسال پیام</button>
+			</form>
     </section>
     
     <section id="social-media">
@@ -121,13 +121,7 @@
 	});
 	
 
-		// اسکریپت فرم تماس (فقط توی contact.html)
-		document.getElementById('contactForm').addEventListener('submit', function(event) {
-			event.preventDefault();
-			   // می‌توانید در اینجا کد ارسال اطلاعات فرم به سرور را اضافه کنید
-			alert('پیام شما با موفقیت ارسال شد. به زودی با شما تماس میگیرم.');
-			this.reset();
-		});
+
 	</script>
 	
 	
