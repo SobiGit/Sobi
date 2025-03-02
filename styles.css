@@ -394,7 +394,7 @@ footer {
     }
 
     .nav-links {
-        /*****             display: none; /* منو مخفیه تا کلیک بشه */
+        display: none; /* منو مخفیه تا کلیک بشه */
         flex-direction: column;
         width: 100%;
         padding: var(--spacing-md);
