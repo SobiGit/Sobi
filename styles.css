@@ -350,8 +350,10 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover, .category-button:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* کمی بزرگ‌تر می‌شه */
+    transition: all 0.3s ease;
 }
 
 /* 9. استایل‌های فوتر */
@@ -560,3 +562,19 @@ footer {
 }
 
 
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+body.loaded #loading {
+    display: none;
+}

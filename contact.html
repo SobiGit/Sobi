@@ -28,6 +28,10 @@
 		<button id="theme-toggle" class="theme-button"><i class="fas fa-moon"></i></button>
     </div>
 </nav>
+
+
+
+	<div id="loading">در حال بارگذاری...</div>
     
     <section id="contact" class="fade-in">
         <h2>ارتباط با من</h2>
@@ -181,7 +185,9 @@
 	});
 	
 	
-	
+	window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+	});
 	
 	
 	</script>

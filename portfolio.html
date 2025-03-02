@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="پرتفولیوی سبحان آب حیات - هنرمند و مهندس و طراح گرافیک">
+	<meta name="description" content="نمونه‌کارهای طراحی و مهندسی سبحان آب حیات - از هنر تا پروژه‌های برقی">
 	<meta name="author" content="سبحان آب حیات">
 	<meta name="keywords" content="سبحان آب حیات، مهندس برق، طراحی دیجیتال، هنرمند ایرانی، رزومه، نمونه کار">
     <title>My portfolio</title>
@@ -26,6 +26,10 @@
     </div>
 </nav>
 
+
+
+	<div id="loading">در حال بارگذاری...</div>
+
     <section>
         <h2>نمونه کارها</h2>
         <div class="portfolio-categories">
@@ -39,7 +43,7 @@
             <div class="gallery-item">
                 <img src="art1.jpg" alt="طراحی چهره">
                 <h3>طراحی چهره</h3>
-                <p>طراحی با مداد، سال 1402</p>
+                <p>طراحی با مداد، سال 1402 - با استفاده از مدادهای فابر-کاستل</p>
             </div>
             
             <div class="gallery-item">
@@ -131,7 +135,9 @@
 	});
 	
 	
-	
+	window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+	});
 	
 	
 	</script>

@@ -35,6 +35,9 @@
 
 	<main>
 	<div class="profile-section">
+	
+	
+		<div id="loading">در حال بارگذاری...</div>
 
 		<img src="images/profile.png" alt="My Profile Picture" class="profile-image">
 
@@ -156,8 +159,17 @@
 	
 	
 	
+	window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+	});
+	
+	
+	
 	</script>
 		
+
+
+
 
 
 </body>

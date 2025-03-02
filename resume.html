@@ -27,6 +27,9 @@
     </div>
 </nav>
 
+
+	<div id="loading">در حال بارگذاری...</div>
+
     <div class="resume-grid">
         <!-- ستون سمت راست -->
         <div>
@@ -219,6 +222,12 @@
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
     }
+	});
+	
+	
+	
+	window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
 	});
 	
 	

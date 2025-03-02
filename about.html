@@ -29,7 +29,7 @@
 
  <!-- محتوای اصلی هر صفحه -->
  
- 
+	<div id="loading">در حال بارگذاری...</div>
 
     <section>
         <h2>سبحان آب حیات</h2>
@@ -120,6 +120,12 @@
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
     }
+	});
+	
+	
+	
+	window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
 	});
 	
 	
