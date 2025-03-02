@@ -57,20 +57,21 @@
 
 
 	/* متغیرهای تم تاریک */
+	/*
 	--dark-background: linear-gradient(135deg, #1a1a1a, #333);
 	--dark-text: #f4f4f4;
 	--dark-secondary: #2a2a2a; /* یه رنگ تیره‌تر برای هدر و فوتر */
-	--dark-box-shadow: 0 2px 5px rgba(255,255,255,0.1);
-	
+	/*--dark-box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+	*/
 	
 	/*رنگ های گرم تر برای تم تاریک*/
 	
-	/** --dark-background: linear-gradient(135deg, #2b1a1a, #3a2a2a); /* قهوه‌ای تیره */
-	/** --dark-text: #f0d8b0; /* یه کرم ملایم برای متن */
-	/**	--dark-secondary: #3a2a2a;
-	/**	--dark-box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+	--dark-background: linear-gradient(135deg, #2b1a1a, #3a2a2a); /* قهوه‌ای تیره */
+	--dark-text: #f0d8b0; /* یه کرم ملایم برای متن */
+	--dark-secondary: #3a2a2a;
+	--dark-box-shadow: 0 2px 5px rgba(255,255,255,0.1);
 	
-	*/
+	
 	
 	
 }
